@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -22,8 +23,9 @@ public class AsceCareerFormTest
 	@Test
 	public void test1() throws Exception
 	{
-		AsceCareerForm acf = new AsceCareerForm();
+		AsceCareerForm acf = new AsceCareerForm(driver);
 		acf.navigateTOCareerForm();
+		acf.contactFormDetails();
 	}
 	
 
