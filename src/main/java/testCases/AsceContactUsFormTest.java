@@ -19,12 +19,28 @@ public WebDriver driver;
 		driver=bs.initialize_driver();
 		driver.get("https://ascensor.stage.ascensor.co.uk/");
 	}
-	@Test
+	@Test(priority =1)
 	public void contactTest() throws Exception
 	{
 		AsceContactUsForm acfm =new AsceContactUsForm(driver);
 		acfm.navigateToContactForm();
 		acfm.contactFormData();
+	}
+	
+	@Test(priority =2)
+	public void negativeCase1() throws Exception
+	{
+		AsceContactUsForm ac =new AsceContactUsForm(driver);
+		ac.negCaseBlank();
+		
+		
+	}
+	@Test(priority =3)
+	public void invalidDatas() throws Exception
+	{
+		AsceContactUsForm ac =new AsceContactUsForm(driver);
+		ac.invalidData();
+		
 	}
 
 

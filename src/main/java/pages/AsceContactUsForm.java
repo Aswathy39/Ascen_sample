@@ -94,7 +94,71 @@ public class AsceContactUsForm
 		
 		
 	}
+	public void negCaseBlank() throws Exception
+	{
+		driver.findElement(contactFormBtn).click();
+//		driver.findElement(cookie).click(); 
+		
+		JavascriptExecutor js1 = (JavascriptExecutor) driver; 
+		js1.executeScript("window.scrollBy(0,500)"); 
+		
+		JavascriptExecutor js2 = (JavascriptExecutor) driver; 
+		js2.executeScript("window.scrollBy(0,400)");
+		
+		Thread.sleep(5000);
+		driver.findElement(submitBtn).click();
+		
+		Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("window.scrollBy(0,-800)"); 
+	}
 	
+	public void invalidData() throws Exception
+	{
+		driver.findElement(contactFormBtn).click();
+		
+		driver.findElement(firstName).sendKeys("fsdf45454rgfgg!@3_==+"); 
+		//lastname     
+		//driver.findElement(By.cssSelector("#lastname-47779a75-0b74-4a23-9332-dfaaaa6a413e")).sendKeys("fs");    
+		driver.findElement(lastName).sendKeys(")(*&^%$#45678908ughfgv");
+		
+		//companyname      
+				driver.findElement(companyName).sendKeys("09*&^%UjHGYTHoigf$%Y");
+				
+				
+				 Thread.sleep(3000);
+				JavascriptExecutor js1 = (JavascriptExecutor) driver; 
+				js1.executeScript("window.scrollBy(0,500)"); 
+				Thread.sleep(4000);
+				
+				  WebElement l=driver.findElement(phoneBtn); 
+				  l.click();
+				
+				//select radio button with click()          
+				driver.findElement(phoneNumber).sendKeys("jghfhffhfhfdt"); 
+				
+				driver.findElement(email).sendKeys("iuyfytd6r(^%$");
+				 
+				WebElement dropdown =driver.findElement(howfindDrop);
+				Select selectobject=new Select(dropdown);
+				selectobject.selectByValue("Networking");
+				
+				//message    
+				driver.findElement(message).sendKeys("fgxtffgghTR*^&^&$#@%574635244364rfghjvoupoy896r6e^F");
+				
+				Thread.sleep(5000);
+				JavascriptExecutor js2 = (JavascriptExecutor) driver; 
+				js2.executeScript("window.scrollBy(0,400)"); 
+				Thread.sleep(2000);
+				//input[@id='legal_consent']
+				driver.findElement(legalConcent).click();
+				
+		        driver.findElement(submitBtn).click();
+				Thread.sleep(2000);
+		        JavascriptExecutor js = (JavascriptExecutor) driver; 
+				js.executeScript("window.scrollBy(0,-800)");
+		
+	}
 
 	
 }
