@@ -24,7 +24,9 @@ public class AsceCareerForm
 	By portfolio = By.xpath("//*[@id=\"portfolio\"]");
 	By email = By.xpath("//input[@id='email']");
 	By phn = By.xpath("//input[@id='phone']");
-	By CvUploadBtn = By.xpath("//div[@class='upload__group']");
+	By cookieNew = By.xpath("//*[@id=\"top\"]/div[3]/a");
+	By CvUploadBtn = By.xpath("//*[@id=\"cv\"]");
+	By submitBtn = By.xpath("//*[@id=\"top\"]/div[2]/div[2]/div/div/div/div/form/div[8]/button");
 	
 	public void navigateTOCareerForm() throws Exception
 	{
@@ -52,7 +54,6 @@ public class AsceCareerForm
 	{
 		 JavascriptExecutor js = (JavascriptExecutor) driver; 
 		  Thread.sleep(5000); js.executeScript("window.scrollBy(0,4000)"); 
-
 		  //The below code is for career form 
 		  //firstname 
 		  driver.findElement(fstnm).sendKeys("Test_Annie"); 
@@ -67,10 +68,26 @@ public class AsceCareerForm
 		  //phone no 
 		  driver.findElement(phn).sendKeys("01111111111"); 
 		  JavascriptExecutor js2 = (JavascriptExecutor) driver; 
-		  Thread.sleep(3000); 
-		  js2.executeScript("window.scrollBy(0,6000)"); 
+		  Thread.sleep(4000); 
+		  js2.executeScript("window.scrollBy(0,5000)"); 
+		  
+		 
+		  
+		  driver.findElement(cookieNew).click();
+//		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
+//		  js3.executeScript("window.scrollBy(0,500)"); 
 		  //click the upload cv field 
-		  driver.findElement(CvUploadBtn).click();
+//		  driver.findElement(CvUploadBtn).click();
+		  driver.findElement(CvUploadBtn).sendKeys("C:\\my\\testcv.docx");
+		  
+		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
+		  js3.executeScript("window.scrollBy(0,500)");
+		  Thread.sleep(2500);
+		  driver.findElement(submitBtn).click();
+		  
+		  
 	}
 
 }
+
+//WebElement upload_file = driver.findElement(By.xpath("//input[@id='cv']")); 
