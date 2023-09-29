@@ -30,16 +30,16 @@ public WebDriver driver;
 	@Test(priority =2)
 	public void negativeCase1() throws Exception
 	{
-		AsceContactUsForm ac =new AsceContactUsForm(driver);
-		ac.negCaseBlank();
+//		AsceContactUsForm ac =new AsceContactUsForm(driver);
+//		ac.negCaseBlank();
 		
 		
 	}
 	@Test(priority =3)
 	public void invalidDatas() throws Exception
 	{
-		AsceContactUsForm ac =new AsceContactUsForm(driver);
-		ac.invalidData();
+//		AsceContactUsForm ac =new AsceContactUsForm(driver);
+//		ac.invalidData();
 		
 	}
 

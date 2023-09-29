@@ -3,11 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
+
+import io.qameta.allure.Allure;
 
 public class AsceCareerForm 
 
 {
 	public WebDriver driver;
+	SoftAssert softAssert =new SoftAssert();
 	
 
 	public  AsceCareerForm(WebDriver driver)
@@ -35,12 +39,20 @@ public class AsceCareerForm
 		//allow cookies    
 		
 		  driver.findElement(cookie).click();
+		  Allure.step("Clicked on cookie accept button");
 				  //wait for 3 seconds and click career page
 				  
 
 		  Thread.sleep(3000);
 		  //click career page
 		  driver.findElement(careerPage).click();
+		  Allure.step("Clicked on button to navigate to career page");
+		  
+		  // to compare actual and expected url matching or not
+		  String ActUrlTxt =driver.getCurrentUrl();
+		  String ExpUrlTxt = "https://ascensor.stage.ascensor.co.uk/careers";
+		  softAssert.assertEquals(ActUrlTxt, ExpUrlTxt, "URL Mismatched");
+		  
 		  //wait for 3 seconds and click 'find out more and apply     
 		  Thread.sleep(3000); 
 		  JavascriptExecutor js1 = (JavascriptExecutor) driver; 
@@ -48,6 +60,15 @@ public class AsceCareerForm
 		  //to click 'find out more and apply' not working     
 		  Thread.sleep(3000); 
 		  driver.findElement(phpDevLeadsPage).click(); 
+		  Allure.step("Clicked on button to navigate to Php developer leads page");
+		  
+		  // to compare actual and expected url matching or not
+		  String ActUrlTxt1 =driver.getCurrentUrl();
+		  String ExpUrlTxt1 = "https://ascensor.stage.ascensor.co.uk/careers/laravel-php-developer-leeds";
+		  softAssert.assertEquals(ActUrlTxt1, ExpUrlTxt1, "URL Mismatched");
+		 
+		  
+		  softAssert.assertAll();
 		
 	}
 	public void contactFormDetails() throws Exception
@@ -57,16 +78,23 @@ public class AsceCareerForm
 		  //The below code is for career form 
 		  //firstname 
 		  driver.findElement(fstnm).sendKeys("Test_Annie"); 
+		  Allure.step("Entered first name");
 		  //lastname 
 		  driver.findElement(lstnm).sendKeys("Test_Kuriakose"); 
+		  Allure.step("Entered last name");
 		  //About you 
 		  driver.findElement(about).sendKeys("Myself Test_annie kuriakose I am working as php developer for 3 year. Worked with Bash, shell scripting, aws service.Myself Tesr_annie kuriakose I am working as php developer for 3 year. Worked with Bash, shell scripting, aws ");  
+		  Allure.step("Entered about details");
 		  //code repo/portfolio 
+		  
 		  driver.findElement(portfolio).sendKeys("https://github.com/clayrisser/craco"); 
+		  Allure.step("Entered portfolio details");
 		  //email 
 		  driver.findElement(email).sendKeys("sit10@ascensor.com"); 
+		  Allure.step("Entered email id");
 		  //phone no 
 		  driver.findElement(phn).sendKeys("01111111111"); 
+		  Allure.step("Entered Phone number");
 		  JavascriptExecutor js2 = (JavascriptExecutor) driver; 
 		  Thread.sleep(4000); 
 		  js2.executeScript("window.scrollBy(0,5000)"); 
@@ -74,20 +102,16 @@ public class AsceCareerForm
 		 
 		  
 		  driver.findElement(cookieNew).click();
-//		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
-//		  js3.executeScript("window.scrollBy(0,500)"); 
-		  //click the upload cv field 
-//		  driver.findElement(CvUploadBtn).click();
+		  
 		  driver.findElement(CvUploadBtn).sendKeys("C:\\my\\testcv.docx");
+		  Allure.step("Resume file location is entered");
 		  
 		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
 		  js3.executeScript("window.scrollBy(0,500)");
 		  Thread.sleep(2500);
 		  driver.findElement(submitBtn).click();
-		  
+		  Allure.step("Submit button is clicked");
 		  
 	}
 
 }
-
-//WebElement upload_file = driver.findElement(By.xpath("//input[@id='cv']")); 
