@@ -7,14 +7,14 @@ import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Allure;
 
-public class AsceCareerForm 
+public class AsceCareerPhpPage 
 
 {
 	public WebDriver driver;
 	SoftAssert softAssert =new SoftAssert();
 	
 
-	public  AsceCareerForm(WebDriver driver)
+	public  AsceCareerPhpPage(WebDriver driver)
 	{
 		this.driver=driver; 
 	}
@@ -112,6 +112,58 @@ public class AsceCareerForm
 		  driver.findElement(submitBtn).click();
 		  Allure.step("Submit button is clicked");
 		  
+	}
+	public void negativeInvalidValue() throws Exception
+	{
+		//to refresh and clear form data
+		driver.navigate().refresh();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		  Thread.sleep(5000); js.executeScript("window.scrollBy(0,4000)"); 
+		  //The below code is for career form 
+		  //firstname 
+		  driver.findElement(fstnm).sendKeys("jhg523w=-yjfr8-0=-0FH_)(*&^%"); 
+		  Allure.step("Entered first name");
+		  //lastname 
+		  driver.findElement(lstnm).sendKeys("POIUSD#$%^&*(098765"); 
+		  Allure.step("Entered last name");
+		  //About you 
+		  driver.findElement(about).sendKeys("Worked with Bash, shell scripting, aws [GFRCFOIR45890-OJKBW234%*()&%$weDCFvhbjui_i%^DF ");  
+		  Allure.step("Entered about details");
+		  //code repo/portfolio 
+		  
+		  driver.findElement(portfolio).sendKeys("LKJHGF5896UHGUY344*^%#Gkjhhdcfgvm.com"); 
+		  Allure.step("Entered portfolio details");
+		  //email 
+		  driver.findElement(email).sendKeys("sit1tyfhjjh(&*^%4667..com"); 
+		  Allure.step("Entered email id");
+		  //phone no 
+		  driver.findElement(phn).sendKeys("khjg76r(*^&%111"); 
+		  Allure.step("Entered Phone number");
+//		  JavascriptExecutor js2 = (JavascriptExecutor) driver; 
+		  Thread.sleep(2000); 
+		
+//		  js2.executeScript("window.scrollBy(0,5000)"); 
+//		  driver.findElement(cookieNew).click();
+		  
+		  driver.findElement(CvUploadBtn).sendKeys("C:\\my\\testcv.docx");
+		  Allure.step("Resume file location is entered");
+		  
+//		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
+//		  js3.executeScript("window.scrollBy(0,500)");
+		  Thread.sleep(2500);
+		  driver.findElement(submitBtn).click();
+		  Allure.step("Submit button is clicked");
+		
+	}
+	public void negativeNullValue() throws Exception
+	{
+		driver.navigate().refresh();
+		Thread.sleep(2500); 
+		
+		  driver.findElement(submitBtn).click();
+		  Allure.step("Submit button is clicked");
+		
 	}
 
 }

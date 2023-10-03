@@ -6,10 +6,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pages.AsceCareerForm;
+import pages.AsceCareerPhpPage;
 import utilities.BaseClass;
 
-public class AsceCareerFormTest 
+public class AsceCareerPhpTest 
 {
 	public WebDriver driver;
 	
@@ -20,12 +20,25 @@ public class AsceCareerFormTest
 		driver=bs.initialize_driver();
 		driver.get("https://ascensor.stage.ascensor.co.uk/");
 	}
-	@Test
+	@Test(priority=1)
 	public void test1() throws Exception
 	{
-		AsceCareerForm acf = new AsceCareerForm(driver);
+		AsceCareerPhpPage acf = new AsceCareerPhpPage(driver);
 		acf.navigateTOCareerForm();
 		acf.contactFormDetails();
+	}
+	@Test(priority=2)
+	public void test2() throws Exception
+	{
+		AsceCareerPhpPage acf = new AsceCareerPhpPage(driver);
+		acf.negativeInvalidValue();
+	}
+	@Test(priority=3)
+	public void test3() throws Exception
+	{
+		AsceCareerPhpPage acf = new AsceCareerPhpPage(driver);
+		acf.negativeNullValue();
+		
 	}
 
 }

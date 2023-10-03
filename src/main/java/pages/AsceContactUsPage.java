@@ -9,14 +9,14 @@ import org.testng.asserts.SoftAssert;
 
 import io.qameta.allure.Allure;
 
-public class AsceContactUsForm 
+public class AsceContactUsPage 
 {
 
 	public WebDriver driver;
 	SoftAssert softAssert =new SoftAssert();
 	
 
-	public  AsceContactUsForm(WebDriver driver)
+	public  AsceContactUsPage(WebDriver driver)
 	{
 		this.driver=driver; 
 	}
@@ -129,7 +129,7 @@ public class AsceContactUsForm
 		js1.executeScript("window.scrollBy(0,500)"); 
 		
 		JavascriptExecutor js2 = (JavascriptExecutor) driver; 
-		js2.executeScript("window.scrollBy(0,400)");
+		js2.executeScript("window.scrollBy(0,500)");
 		
 		Thread.sleep(5000);
 		driver.findElement(submitBtn).click();
@@ -141,9 +141,9 @@ public class AsceContactUsForm
 	
 	public void invalidData() throws Exception
 	{
-		driver.findElement(cookie).click(); 
-//		driver.findElement(contactFormBtn).click();
-//		 Allure.step("Contact form button is clicked");
+//		driver.findElement(cookie).click(); 
+		driver.findElement(contactFormBtn).click();
+		 Allure.step("Contact form button is clicked");
 		
 		driver.findElement(firstName).sendKeys("fsdf45454rgfgg!@3_==+"); 
 		 Allure.step("Invalid first name is entered");
@@ -158,9 +158,9 @@ public class AsceContactUsForm
 				
 				
 				Thread.sleep(3000);
-				JavascriptExecutor js1 = (JavascriptExecutor) driver; 
-				js1.executeScript("window.scrollBy(0,500)"); 
-				Thread.sleep(4000);
+//				JavascriptExecutor js1 = (JavascriptExecutor) driver; 
+//				js1.executeScript("window.scrollBy(0,500)"); 
+//				Thread.sleep(4000);
 				
 				  WebElement l=driver.findElement(phoneBtn); 
 				  l.click();

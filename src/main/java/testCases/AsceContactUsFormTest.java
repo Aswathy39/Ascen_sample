@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pages.AsceContactUsForm;
+import pages.AsceContactUsPage;
 import utilities.BaseClass;
 
 public class AsceContactUsFormTest 
@@ -22,7 +22,7 @@ public WebDriver driver;
 	@Test(priority =1)
 	public void contactTest() throws Exception
 	{
-		AsceContactUsForm acfm =new AsceContactUsForm(driver);
+		AsceContactUsPage acfm =new AsceContactUsPage(driver);
 		acfm.navigateToContactForm();
 		acfm.contactFormData();
 	}
@@ -30,16 +30,16 @@ public WebDriver driver;
 	@Test(priority =2)
 	public void negativeCase1() throws Exception
 	{
-//		AsceContactUsForm ac =new AsceContactUsForm(driver);
-//		ac.negCaseBlank();
+		AsceContactUsPage ac =new AsceContactUsPage(driver);
+		ac.negCaseBlank();
 		
 		
 	}
 	@Test(priority =3)
 	public void invalidDatas() throws Exception
 	{
-//		AsceContactUsForm ac =new AsceContactUsForm(driver);
-//		ac.invalidData();
+		AsceContactUsPage ac =new AsceContactUsPage(driver);
+		ac.invalidData();
 		
 	}
 
