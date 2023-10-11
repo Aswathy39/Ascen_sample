@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-04T19:34:55 BST" name="Default suite" finished-at="2023-10-04T19:35:19 BST" duration-ms="23765">
+  <suite started-at="2023-10-10T19:29:37 BST" name="Default suite" finished-at="2023-10-10T19:29:59 BST" duration-ms="22055">
     <groups>
     </groups>
-    <test started-at="2023-10-04T19:34:55 BST" name="Default test" finished-at="2023-10-04T19:35:19 BST" duration-ms="23765">
+    <test started-at="2023-10-10T19:29:37 BST" name="Default test" finished-at="2023-10-10T19:29:59 BST" duration-ms="22055">
       <class name="testCases.AsceScheduleCallTest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.AsceScheduleCallTest@2f2d52ef]" started-at="2023-10-04T19:34:55 BST" name="beforetest" finished-at="2023-10-04T19:35:06 BST" duration-ms="10734" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:testCases.AsceScheduleCallTest@25c53f74]" started-at="2023-10-10T19:29:37 BST" name="beforetest" finished-at="2023-10-10T19:29:46 BST" duration-ms="9297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="test1()[pri:1, instance:testCases.AsceScheduleCallTest@2f2d52ef]" started-at="2023-10-04T19:35:06 BST" name="test1" finished-at="2023-10-04T19:35:19 BST" duration-ms="12492" status="FAIL">
+        <test-method signature="test1()[pri:1, instance:testCases.AsceScheduleCallTest@25c53f74]" started-at="2023-10-10T19:29:46 BST" name="test1" finished-at="2023-10-10T19:29:59 BST" duration-ms="12189" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"11"}
-  (Session info: chrome=117.0.5938.132)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table[@class='DatePicker__StyledTable-sc-1teprn1-0 qSkyQ']"}
+  (Session info: chrome=117.0.5938.150)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a497848af27d2b4403c9bd5bae4419f5, findElement {using=link text, value=11}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\Aswat\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63877/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a497848af27d2b4403c9bd5bae4419f5]]>
+Command: [2ff3d2748b7d7955c32a50f37185e9a7, findElement {using=xpath, value=//table[@class='DatePicker__StyledTable-sc-1teprn1-0 qSkyQ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\Aswat\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51466}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51466/devtoo..., se:cdpVersion: 117.0.5938.150, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ff3d2748b7d7955c32a50f37185e9a7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"11"}
-  (Session info: chrome=117.0.5938.132)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@class='DatePicker__StyledTable-sc-1teprn1-0 qSkyQ']"}
+  (Session info: chrome=117.0.5938.150)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a497848af27d2b4403c9bd5bae4419f5, findElement {using=link text, value=11}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\Aswat\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63877/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a497848af27d2b4403c9bd5bae4419f5
+Command: [2ff3d2748b7d7955c32a50f37185e9a7, findElement {using=xpath, value=//table[@class='DatePicker__StyledTable-sc-1teprn1-0 qSkyQ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\Aswat\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51466}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51466/devtoo..., se:cdpVersion: 117.0.5938.150, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ff3d2748b7d7955c32a50f37185e9a7
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,7 +50,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at pages.AsceScheduleCallPage.scheduleCall(AsceScheduleCallPage.java:43)
+at pages.AsceScheduleCallPage.selectDateFromCal(AsceScheduleCallPage.java:54)
+at pages.AsceScheduleCallPage.scheduleCall(AsceScheduleCallPage.java:47)
 at testCases.AsceScheduleCallTest.test1(AsceScheduleCallTest.java:26)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

@@ -141,8 +141,8 @@ public class AsceCareerHocsPage
 		  Allure.step("Resume file location is entered");
 		  
 		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
-		  js3.executeScript("window.scrollBy(0,500)");
-		  Thread.sleep(2500);
+		  js3.executeScript("window.scrollBy(0,250)");
+		  Thread.sleep(3000);
 		  driver.findElement(submitBtn).click();
 		  Allure.step("Submit button is clicked");
 		
@@ -150,7 +150,7 @@ public class AsceCareerHocsPage
 	public void negativeNullValue() throws Exception
 	{
 		driver.navigate().refresh();
-		Thread.sleep(2500); 
+		Thread.sleep(3000); 
 		
 		  driver.findElement(submitBtn).click();
 		  Allure.step("Submit button is clicked");

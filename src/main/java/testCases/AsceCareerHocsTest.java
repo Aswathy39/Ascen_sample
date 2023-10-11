@@ -1,6 +1,7 @@
 package testCases;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -36,6 +37,12 @@ public WebDriver driver;
 	{
 		AsceCareerHocsPage acf = new AsceCareerHocsPage(driver);
 		acf.negativeNullValue();
+		
+	}
+	@AfterTest()
+	public void quitBrowser()
+	{
+		driver.quit();
 	}
 
 

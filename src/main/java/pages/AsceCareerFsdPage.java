@@ -145,7 +145,7 @@ public class AsceCareerFsdPage
 		  
 //		  JavascriptExecutor js3 = (JavascriptExecutor) driver; 
 //		  js3.executeScript("window.scrollBy(0,500)");
-		  Thread.sleep(2500);
+		  Thread.sleep(3000);
 		  driver.findElement(submitBtn).click();
 		  Allure.step("Submit button is clicked");
 		
