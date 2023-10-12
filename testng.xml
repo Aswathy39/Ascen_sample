@@ -3,8 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testCases.AsceCareerFormTest"/>
+      <class name="testCases.AsceScheduleCallTest"/>
+      <class name="testCases.AsceCareerFsdTest"/>
+      <class name="testCases.AscenCareerDpmTest"/>
+      <class name="testCases.AsceCareerPhpTest"/>
       <class name="testCases.AsceContactUsFormTest"/>
+      <class name="testCases.AsceCareerWpdTest"/>
+      <class name="testCases.AsceCareerHocsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
